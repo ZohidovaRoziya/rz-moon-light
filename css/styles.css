@@ -23,7 +23,7 @@
 }
 
 *:focus {
-    outline: 2px dotted var(--primary-color);
+    outline: 2px dotted #030D22;
     outline-offset: 3px;
 }
 
@@ -146,7 +146,8 @@ section::after {
   }
   
   
-  .btn-grad {background-image: linear-gradient(to right, #000000 0%, #434343  51%, #000000  100%)}
+
+  .btn-grad {background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%)}
   .btn-grad {
      margin: 10px;
      padding: 15px 45px;
@@ -158,12 +159,12 @@ section::after {
      box-shadow: 0 0 20px #eee;
      border-radius: 10px;
      display: block;
-     margin-left: auto;
+     border : 0;
+     margin-top: 70px;
      margin-right: auto;
-     margin-top: 50px;
-     border: none;
+     margin-left: auto;
    }
-  
+
    .btn-grad:hover {
      background-position: right center; /* change the direction of the change here */
      color: #fff;
