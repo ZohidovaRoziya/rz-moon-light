@@ -1,278 +1,327 @@
 /* GLOBAL IMPORT FONT FAMLIY LINK  */
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rozha+One&display=swap");
 
 
 /* CUSTOM PROPS CSS START  */
 :root {
-    --primary-color: #000;
-    --text-color: #fff;
+  --primary-color: #030d22;
+  --bg-color: #0a2a43;
+  --text-color: #fff;
 }
 
 /* GLOBAL CSS START  */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing:inherit;
+  box-sizing: inherit;
 }
 
 *:focus {
-    outline: 2px dotted #030D22;
-    outline-offset: 3px;
+  outline: 2px dotted var(--primary-color);
+  outline-offset: 3px;
 }
 
 html {
-    height: 100%;
-    box-sizing:border-box;
-    scroll-behavior: smooth;
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #0a2a43;
-    min-height: 1500px;
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-
+  background-color: var(--bg-color);
+  min-height: 1500px;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* CONTAINER CSS START  */
 .container {
-     width: 100%;
-     max-width: 1200px;
-     margin-left: auto;
-     margin-right: auto;
-     padding-left: 50px;
-     padding-right: 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /* SAIT MAIN CSS START  */
 .site-main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 /* SECTION CSS START  */
-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.site-header-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-section::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #0a2a43, transparent);
-    z-index: 10000;
+.site-header-section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #0a2a43, transparent);
+  z-index: 10000;
 }
 
-section::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #0a2a43;
-    z-index: 10000;
-    mix-blend-mode: color;
+.site-header-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: 10000;
+  mix-blend-mode: color;
 }
 
 .site-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
 }
 
 .site-heading {
-    position: relative;
-    color: #fff;
-    font-size: 10em;
-    z-index: 1;
+  position: relative;
+  color: var(--text-color);
+  font-size: 10em;
+  z-index: 1;
 }
 
 #road {
-    z-index: 2;
+  z-index: 2;
+}
+
+/* HERO SECTION CSS START  */
+.hero-section {
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 60px;
+}
+
+.hero-heading {
+  font-size: 60px;
+  font-variant: small-caps;
+}
+
+.site-text {
+  margin-bottom: 100px;
+}
+
+/* BUTTON CSS START  */
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #77a1d3 0%,
+    #79cbca 51%,
+    #77a1d3 100%
+  );
+}
+.btn-grad {
+  margin: 10px;
+  padding: 17px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: var(--primary-color);
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  border: 0;
+  margin-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.content-title {
+  font-variant: small-caps;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.info-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-wrapper:not(:last-child) {
+  margin-right: 40px;
+}
+
+.site-info {
+  font-size: 18px;
+  text-align: center;
+  font-family: monospace;
+}
+
+/* CARDS SECTION SCC START  */
+.cards-section {
+  padding: 40px;
+  background-color: var(--primary-color);
+}
+
+.cards-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards-item {
+  padding: 20px;
+  padding-bottom: 40px;
+  background-color: rgba(243, 241, 241, 0.1);
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.cards-item:hover {
+  border: 1px solid rgba(255, 255, 255, 0.548);
+  box-shadow: 0 0 10px #eee;
+  transform: scale(1.1);
+}
+
+.cards-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.card-img {
+  display: flex;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-title {
+  margin-bottom: 30px;
+}
+
+.card-subtitlle {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-section {
+  padding: 50px;
+  text-align: center;
+}
+.info-heading {
+  font-variant: small-caps;
+  margin-bottom: 20px;
+}
+
+/* CONTACT SECTION SCC START  */
+.contact-section {
+  padding: 50px;
+  background-image: linear-gradient(270deg, #97B7D0 50%, var(--primary-color) 50%);
+}
+
+.contact-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-link {
+  font-size: 25px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+.contact-item:last-child a {
+  color:var(--primary-color);
+}
+
+.site-footer {
+  background-color: #081526;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 
+.site-logo {
+  display: flex;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
 
-/* MINI SITE css start  */
-.container1 {
-    font-family: cursive;
-    height: 550px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    text-align: center;
-    background-position: 100% 50%;
-  }
-  .wrap {
-    position: relative;
-    top: 220px;
-  }
-  .welcom {
-    font-family: Georgia, "Times New Roman", Times, serif;
-  }
-  
-  .big{
-      font-size: 60px;
-  }
-  
-  .lorem {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-  
-  
+.author {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  font-variant: small-caps;
+  letter-spacing: 5px;
+  font-family: 'Rozha One', serif;
+  margin-inline: auto;
+}
 
-  .btn-grad {background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%)}
-  .btn-grad {
-     margin: 10px;
-     padding: 15px 45px;
-     text-align: center;
-     text-transform: uppercase;
-     transition: 0.5s;
-     background-size: 200% auto;
-     color: white;            
-     box-shadow: 0 0 20px #eee;
-     border-radius: 10px;
-     display: block;
-     border : 0;
-     margin-top: 70px;
-     margin-right: auto;
-     margin-left: auto;
-   }
+.footer-socials {
+  list-style-type: none;
+  margin: 30px 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-   .btn-grad:hover {
-     background-position: right center; /* change the direction of the change here */
-     color: #fff;
-     text-decoration: none;
-   }
-  
-  
-  .container2 {
-    position: relative;
-    height: 200px;
-    text-align: center;
-    top: 40px;
-  }
-  .web{
-      font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-  .box {
-    display: flex !important;
-    justify-content: space-between;
-    align-items: center;
-    width: 1100px;
-    position: relative;
-    left: 150px;
-    padding-top: 20px;
-  }
-  .box1{
-      margin-left: 15px;
-  }
-  
-  .container3 {
-    background-color: #030D22;
-    height: 550px;
-    color: white;
-    text-align: center;
-  }
-  .demo {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 55px;
-  }
-  .card {
-    width: 250px;
-    background-color: white;
-    color: black;
-    height: 450px;
-    margin-left: 45px;
-  }
-  .develop{
-      padding-top: 30px;
-      padding-bottom: 20px;
-      font-family: MS Sans Serif;
-  }
-  .loremText{
-      text-align: center;
-      padding-inline: auto;
-      font-family: SimSun;
-  }
-  
-  .container4 {
-    position: relative;
-    height: 160px;
-    text-align: center;
-    top: 40px;
-  }
-  .big1{
-    font-size:35px;
-  }
-  
-  .container5{
-    display: flex;
-;
-  }
-  .col1{
-    width:50%;
-    height:100px;
-    background-color: rgb(68, 50, 233);
-    text-align: center;
-    color: white;
-    padding: 60px;
-  }
-  .ipsun{
-    padding: 70px;
-  }
-  .col2{
-    width:50%;
-    height:100px;
-    background-color: rgb(5, 5, 65);
-    text-align: center;
-    color: white;
-    padding: 60px;
-  }
-  .copital{
-    font-size:23px;
-  }
-  
-  .container6{
-    display: flex;
-    justify-content: space-between;
-    height: 200px;
-    padding-top: 150px;
-  }
-  .row1{
-    color: white;
-    margin-left: 270px;
-  }
-  .row2{
-    color: white;
-    margin-right:280px;
-  }
-  
+.footer__social:not(:last-child) {
+  margin-right: 30px;
+}
+
+.footer__social__link {
+  font-size: 40px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.footer__social__link:hover {
+  color: #97B7D0;
+}
+
